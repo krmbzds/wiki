@@ -1,0 +1,4 @@
+= {page-component-title}
+== A page
+
+And some content.
