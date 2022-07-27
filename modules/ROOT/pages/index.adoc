@@ -1,4 +1,4 @@
 = {page-component-title}
-== A page
+== A wiki page
 
-And some content.
+And some wiki content.

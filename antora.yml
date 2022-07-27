@@ -1,5 +1,5 @@
 name: wiki 
-title: Antora Quickstart  
+title: Wiki
 version: ~
 start_page: ROOT:index.adoc 
 nav: 
