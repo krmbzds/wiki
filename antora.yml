@@ -1,6 +1,6 @@
 name: wiki 
 title: Wiki
 version: ~
-start_page: ROOT:index.adoc 
+start_page: index.adoc
 nav: 
 - modules/ROOT/nav.adoc
