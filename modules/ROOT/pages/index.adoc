@@ -1,4 +1,8 @@
 = {page-component-title}
-== A wiki page
+Kerem Bozdas
+:idprefix:
+:idseparator: -
+:page-pagination:
+:description: {page-component-title} Index
 
 And some wiki content.
