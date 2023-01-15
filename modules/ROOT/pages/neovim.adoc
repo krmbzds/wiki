@@ -1,0 +1,172 @@
+= Neovim
+Kerem Bozdas
+:idprefix:
+:idseparator: -
+:page-pagination:
+:description: Vim notes
+:experimental:
+
+== Tips
+
+=== Simplify keymaps
+
+[source,lua]
+----
+-- Modes
+--   normal_mode = "n",
+--   insert_mode = "i",
+--   visual_mode = "v",
+--   visual_block_mode = "x",
+--   term_mode = "t",
+
+-- Keymaps
+local opts = { noremap = true, silent = true }
+local keymap = vim.api.nvim_set_keymap
+
+-- Insert --
+-- Make Control+Backspace delete whole words
+keymap("i", "<C-H>", "<C-W>", opts)
+----
+
+=== Centering the screen
+
+[source,lua]
+----
+-- Half-page up/down
+keymap("n", "<C-u>", "<C-u>zz", opts)
+keymap("n", "<C-d>", "<C-d>zz", opts)
+
+-- Cursor history
+keymap("n", "<C-o>", "<C-o>zz", opts)
+keymap("n", "<C-i>", "<C-i>zz", opts)
+----
+
+=== Keep cursor in place when joining
+
+[source,lua]
+----
+keymap("n", "J", "mzJ`z", opts)
+keymap("n", "gJ", "mzgJ`z", opts)
+----
+
+=== Repeat last macro with single key
+
+[source,lua]
+----
+keymap("n", ",", "@@", opts)
+----
+
+== Keymaps
+
+=== Movement
+
+[%autowidth]
+[cols=">,"]
+|===
+|Key |Description
+
+|kbd:[Ctrl+y]
+|move up one line without moving the cursor
+
+|kbd:[Ctrl+e]
+|move down one line without moving the cursor
+
+|kbd:[5G]
+|go to line 5 (instead of :5)
+
+|kbd:[W] kbd:[H]
+|jump to {start, end} of next Word
+
+|kbd:[B]
+|jump to start of previous Word
+
+|kbd:[tx]
+|jump to before next occurrence of character x
+
+|kbd:[g_]
+|jump to last non-blank char of line
+
+|kbd:[^]
+|start of first word on current line
+
+|kbd:[-]
+|start of previous line
+
+|kbd:[Enter]
+|start of next line
+|===
+
+=== Help Mode
+
+[%autowidth]
+[cols=">,"]
+|===
+|Key |Description
+
+|kbd:[Ctrl+\]]
+|Jump to subject under cursor
+
+|kbd:[Ctrl+t]
+|Return from the last jump
+|===
+
+=== Text Modification
+
+[%autowidth]
+[cols=">,"]
+|===
+|Key |Description
+
+|kbd:[gwip]
+|reflow paragraph
+
+|kbd:[gJ]
+|join current line with the next without space
+
+|kbd:[I]
+|insert at the beginning of the line
+
+|kbd:[D]
+|delete (cut) to the end of the line
+
+|kbd:[cl]
+|delete character and substitute text
+
+|kbd:[cc]
+|change (replace) entire line
+
+|kbd:[c$]
+|change (replace) to the end of the line
+
+|kbd:[cw]
+|change (replace) to the end of word
+
+|kbd:[ciw]
+|change (replace) entire word
+
+|kbd:["xy]
+|yank into register x
+
+|kbd:[z=]
+|suggest corrections (normal mode)
+|===
+
+=== Insert Mode
+
+[%autowidth]
+[cols=">,"]
+|===
+|Key |Description
+
+|kbd:[Ctrl+T]
+|Increase indentation level
+
+|kbd:[Ctrl+D]
+|Decrease indentation level
+
+|kbd:[Ctrl+W]
+|Delete preceding word
+
+|kbd:[Ctrl+O]
+|Switch to Normal mode for one command
+|===

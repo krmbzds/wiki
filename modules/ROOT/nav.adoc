@@ -1,1 +1,2 @@
 * xref:index.adoc[Index]
+* xref:neovim.adoc[Neovim]
