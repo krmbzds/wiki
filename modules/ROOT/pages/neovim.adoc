@@ -8,6 +8,22 @@ Kerem Bozdas
 
 == Tips
 
+=== Pretty Print
+
+Use `vim.pretty_print()` to print things in human-readable format.
+
+[source,lua]
+----
+:lua vim.pretty_print(vim.loop.cpu_info())
+----
+
+Use `=` shorthand version for brevity.
+
+[source,lua]
+----
+:lua =vim.loop.cpu_info()
+----
+
 === Simplify keymaps
 
 [source,lua]
@@ -41,7 +57,7 @@ keymap("n", "<C-o>", "<C-o>zz", opts)
 keymap("n", "<C-i>", "<C-i>zz", opts)
 ----
 
-=== Keep cursor in place when joining
+=== Keep cursor in place
 
 [source,lua]
 ----
@@ -49,7 +65,9 @@ keymap("n", "J", "mzJ`z", opts)
 keymap("n", "gJ", "mzgJ`z", opts)
 ----
 
-=== Repeat last macro with single key
+=== Repeat last macro
+
+Bind `,` to `@@` to repeat last macro with a single key.
 
 [source,lua]
 ----
