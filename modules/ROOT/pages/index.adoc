@@ -5,4 +5,5 @@ Kerem Bozdas
 :page-pagination:
 :description: {page-component-title} Index
 
-And some wiki content.
+.List of wiki pages:
+- xref:neovim.adoc[Neovim]
