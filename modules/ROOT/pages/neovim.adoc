@@ -17,6 +17,8 @@ Use `vim.pretty_print()` to print things in human-readable format.
 :lua vim.pretty_print(vim.loop.cpu_info())
 ----
 
+NOTE: https://github.com/neovim/neovim/pull/22562[Neovim#22562]: `pretty_print` has been renamed to `print`.
+
 Use `=` shorthand version for brevity.
 
 [source,lua]
