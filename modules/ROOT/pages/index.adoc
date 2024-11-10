@@ -6,5 +6,6 @@ Kerem Bozdas
 :description: {page-component-title} Index
 
 .List of wiki pages:
+- xref:git.adoc[Git]
 - xref:neovim.adoc[Neovim]
 - xref:ruby.adoc[Ruby]

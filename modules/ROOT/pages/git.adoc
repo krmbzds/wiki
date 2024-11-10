@@ -1,0 +1,23 @@
+= Git
+Kerem Bozdas
+:idprefix:
+:idseparator: -
+:page-pagination:
+:description: Git notes
+:experimental:
+
+== Tips
+
+=== Full-text Search on All Revisions
+
+[source,bash]
+----
+git grep $MY_SEARCH_STRING $(git rev-list --all)
+----
+
+=== Find Branch from Commit Hash
+
+[source,bash]
+----
+git branch --contains $COMMIT_HASH
+----
