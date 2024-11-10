@@ -7,3 +7,4 @@ Kerem Bozdas
 
 .List of wiki pages:
 - xref:neovim.adoc[Neovim]
+- xref:ruby.adoc[Ruby]

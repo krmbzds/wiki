@@ -1,0 +1,41 @@
+= Ruby
+Kerem Bozdas
+:idprefix:
+:idseparator: -
+:page-pagination:
+:description: Ruby notes
+:experimental:
+
+== Tips
+
+=== Lazy Enumerators
+
+Let's say we want to find numbers that are divisible by `19` and `23`.
+
+[source,ruby]
+----
+infinite_range = (1..Float::INFINITY)
+----
+
+Calling `select` on infinite range will hang forever because `select` is eager:
+
+[source,ruby]
+----
+e = infinite_range.select {|n| n % 19 == 0 && n % 23 == 0 }
+----
+
+Adding `lazy` will return an `Enumerator::Lazy` instance:
+
+[source,ruby]
+----
+e = infinite_range.lazy.select {|n| n % 19 == 0 && n % 23 == 0 }
+----
+
+Now we can call `next` on the enumerator and `select` will be evaluated lazily:
+
+[source,ruby]
+----
+e.class #=> Enumerator::Lazy
+e.next  #=> 437
+e.next  #=> 874
+----
