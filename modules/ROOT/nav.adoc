@@ -2,3 +2,4 @@
 * xref:git.adoc[Git]
 * xref:neovim.adoc[Neovim]
 * xref:ruby.adoc[Ruby]
+* xref:rails.adoc[Rails]

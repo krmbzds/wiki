@@ -1,0 +1,20 @@
+= Rails
+Kerem Bozdas
+:idprefix:
+:idseparator: -
+:page-pagination:
+:description: Rails notes
+:experimental:
+
+== Tips
+
+== Rename a Column with `alias_attribute`
+
+Use `alias_attribute` in your model to create an alias for an existing database column without modifying the schema.
+
+[source,ruby]
+----
+class User < ApplicationRecord
+  alias_attribute :new_name, :old_name
+end
+----
