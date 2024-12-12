@@ -15,6 +15,13 @@ Kerem Bozdas
 git grep $MY_SEARCH_STRING $(git rev-list --all)
 ----
 
+=== File Name Search on All Revisions
+
+[source,bash]
+----
+git log --all --name-only --pretty=format: | grep -E 'pattern1|pattern2'
+----
+
 === Find Branch from Commit Hash
 
 [source,bash]
