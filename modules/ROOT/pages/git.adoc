@@ -28,3 +28,19 @@ git log --all --name-only --pretty=format: | grep -E 'pattern1|pattern2'
 ----
 git branch --contains $COMMIT_HASH
 ----
+
+=== Get File From a Different Branch
+
+==== Old shool way
+
+[source,bash]
+----
+git checkout $FROM_BRANCH -- db/schema.rb
+----
+
+==== Modern Git
+
+[source,bash]
+----
+git restore source=$FROM_BRANCH db/schema.rb
+----
