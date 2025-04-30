@@ -31,7 +31,7 @@ git branch --contains $COMMIT_HASH
 
 === Get File From a Different Branch
 
-==== Old shool way
+==== Old School Way
 
 [source,bash]
 ----
