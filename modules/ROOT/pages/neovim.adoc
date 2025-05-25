@@ -26,6 +26,13 @@ Use `=` shorthand version for brevity.
 :lua =vim.loop.cpu_info()
 ----
 
+=== Run Macro Until EOL
+
+[source,lua]
+----
+:%normal @q
+----
+
 === Simplify keymaps
 
 [source,lua]
